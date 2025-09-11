@@ -20,7 +20,7 @@ namespace SpaceHustle.Enemies
         public void TakeDamage(int amount)
         {
             _current -= amount;
-            if (_current < 0)
+            if (_current <= 0)
             {
                 Die();
             }

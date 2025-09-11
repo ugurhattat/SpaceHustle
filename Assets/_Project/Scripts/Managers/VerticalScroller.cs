@@ -1,34 +1,31 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace SpaceHustle.Managers
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     public class VerticalScroller : MonoBehaviour
     {
-        [Tooltip("Dunya birimi/sn")]
-        public float speed = 1.5f;
-        public float tileHeight {  get; private set; } // Otomatik hesaplanir(SpriteRenderer.bounds.size.y scale dahil gercek y�kseklik)
+        public float speed = 1.5f;   // Kayma hızı
+        public float tileHeight;     // Sprite yüksekliği
 
-        SpriteRenderer sr;
-
-        private void Awake()
+        private void Start()
         {
-            sr = GetComponent<SpriteRenderer>();
-            tileHeight = sr.bounds.size.y;
+            // Sprite yüksekliğini hesapla
+            var sr = GetComponent<SpriteRenderer>();
+            tileHeight = sr.sprite.bounds.size.y * transform.localScale.y;
         }
 
         private void Update()
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime); // asagi dogru kaydirir
+            // Aşağı kaydır
+            transform.localPosition += Vector3.down * speed * Time.deltaTime;
 
-            if (transform.position.y <= -tileHeight)
+            // Eğer çok aşağı indiysen yukarıya sar
+            if (transform.localPosition.y <= -tileHeight)
             {
-                transform.position += Vector3.up * (2f * tileHeight); //iki parca kullandigimiz icin, parca -tileHeight altina inerse 2*tileHeight yukari ziplat
+                transform.localPosition += Vector3.up * 2f * tileHeight;
             }
         }
     }
 }
-
-

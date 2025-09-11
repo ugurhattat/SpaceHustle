@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -41,15 +43,24 @@ TagManager:
   - name: Background
     uniqueID: 2998901233
     locked: 0
+  - name: Platforms
+    uniqueID: 998788381
+    locked: 0
+  - name: VFX
+    uniqueID: 582729817
+    locked: 0
   - name: Projectiles
     uniqueID: 3904840391
+    locked: 0
+  - name: Enemies
+    uniqueID: 2541914277
     locked: 0
   - name: Player
     uniqueID: 2208839135
     locked: 0
+  - name: UI
+    uniqueID: 1698130633
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Enemies
-    uniqueID: 2541914277
     locked: 0
