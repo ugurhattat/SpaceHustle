@@ -12,7 +12,7 @@ namespace SpaceHustle.Managers
         private void Start()
         {
             // Sprite yüksekliğini hesapla
-            var sr = GetComponent<SpriteRenderer>();
+            var sr = GetComponentInChildren<SpriteRenderer>();
             tileHeight = sr.sprite.bounds.size.y * transform.localScale.y;
         }
 

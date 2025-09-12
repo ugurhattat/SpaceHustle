@@ -12,6 +12,8 @@ namespace SpaceHustle.Enemies
         [Tooltip("Olurken oynatilacak efekt (Opsiyonel)")]
         public GameObject deathVfxPrefab;
 
+        public int Current => _current;  // barin oran hesaplamasi icin okunur current.
+
         private void Awake()
         {
             _current = maxHealth;
@@ -19,7 +21,7 @@ namespace SpaceHustle.Enemies
         
         public void TakeDamage(int amount)
         {
-            _current -= amount;
+            _current = Mathf.Max(0, _current - amount);  // can = can - hasar (0'in altina inme)
             if (_current <= 0)
             {
                 Die();
@@ -31,9 +33,8 @@ namespace SpaceHustle.Enemies
             if (deathVfxPrefab != null)
             {
                 Instantiate(deathVfxPrefab, transform.position, Quaternion.identity);
-
-                Destroy(gameObject);
             }
+            Destroy(gameObject);
         }
     }
 }

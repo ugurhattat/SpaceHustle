@@ -12,7 +12,7 @@ namespace SpaceHustle.Managers
         private void Start()
         {
             // bgA'nın yüksekliğini hesapla
-            var sr = bgA.GetComponent<SpriteRenderer>();
+            var sr = bgA.GetComponentInChildren<SpriteRenderer>();
             float h = sr.sprite.bounds.size.y * bgA.localScale.y;
 
             // Yerlerini ayarla

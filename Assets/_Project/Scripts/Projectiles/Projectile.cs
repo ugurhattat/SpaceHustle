@@ -47,12 +47,12 @@ namespace SpaceHustle.Projectiles
         private void OnTriggerEnter2D(Collider2D other)  // trigger kullaniyorsak mermi collider'i IsTrigger=true olmali
         {
             // tag ile ugrasmadan dogrudan EnemyHealth var mi diye bak
-                var enemy = other.GetComponent<EnemyHealth>();
+                var enemy = other.GetComponentInParent<EnemyHealth>();
             if (enemy == null) return;
 
             enemy.TakeDamage(damage);  // power-up'a gore degisen damage uygula
-
-            Destroy(gameObject);  // mermi tek kullanimlik
+            Debug.Log("HIT: " + other.name);
+            gameObject.SetActive(false);
         }
 
     }

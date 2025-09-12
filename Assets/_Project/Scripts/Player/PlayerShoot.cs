@@ -5,7 +5,8 @@ using SpaceHustle.Projectiles;
 
 namespace SpaceHustle.Player
 {
-    //Space basili tutulunca mermi uretir. Fire mode/poewr-up seviyesine gore
+    public enum FireMode { Single, Double, TripleSpread }
+    //Space basili tutulunca mermi uretir. Fire mode/power-up seviyesine gore
     //tekli,ciftli veya yayli atis yapar. simdilik poolsuz (instantiate)
     //sonrada pool'a gecmek icin sadece SpawnProjectile() metodunu degistiricez
     public class PlayerShoot : MonoBehaviour
@@ -61,12 +62,12 @@ namespace SpaceHustle.Player
             p.direction = dir;
             p.damage = damage;
         }
+
+        // Powwer-up icin basit API
+        public void AddLevel(int amount = 1) => weaponLevel = Mathf.Clamp(weaponLevel + amount, 1, 5);
+        public void SetMode(FireMode newMode) => mode = newMode;
     }
 
-    public enum FireMode
-    {
-        Single, Double, TripleSpread
-    }
 }
 
 
