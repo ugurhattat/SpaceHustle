@@ -6,6 +6,7 @@ namespace SpaceHustle.Managers
 {
     public class BackgroundPairAligner : MonoBehaviour
     {
+        [Header("Backgrounds Transforms")]
         public Transform bgA; // Alttaki
         public Transform bgB; // Üstteki
 

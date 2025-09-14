@@ -8,17 +8,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 485253631626303201, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 485253631626303201, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 485253631626303201, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
-      propertyPath: m_Color.r
-      value: 0
+    - target: {fileID: 4393578909671827702, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5457009296505372067, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
       propertyPath: m_Name
@@ -63,6 +55,18 @@ PrefabInstance:
     - target: {fileID: 6093502945973491729, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147446633697909235, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416503318524414905, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819730273246768542, guid: e7df9bdf1132c8b4fa79a7f0d31ac708, type: 3}
+      propertyPath: fireRate
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

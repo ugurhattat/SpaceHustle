@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 4440135285690370729}
   - component: {fileID: 6525301847457355632}
   m_Layer: 0
-  m_Name: Laser_Small
-  m_TagString: Untagged
+  m_Name: PlayerBullet
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
